@@ -1,0 +1,14 @@
+#! /bin/sh
+# Setup gpio pin 14 (whichs maps to 162 in strange beagle land)
+# Setup gpio pin 16 (whichs maps to 161 in strange beagle land)
+
+echo 161 > /sys/class/gpio/export
+echo 162 > /sys/class/gpio/export
+
+# I don't know why it requires setting the permissions twice,
+# but once doesn't work 
+chmod og+w /sys/class/gpio/gpio161/direction 
+chmod og+w /sys/class/gpio/gpio161/direction 
+
+chmod og+w /sys/class/gpio/gpio162/direction
+chmod og+w /sys/class/gpio/gpio162/direction

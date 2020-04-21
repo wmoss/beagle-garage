@@ -1,0 +1,3 @@
+echo "low" > /sys/class/gpio/gpio$1/direction
+sleep 1
+echo "high" > /sys/class/gpio/gpio$1/direction
